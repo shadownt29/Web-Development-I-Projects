@@ -1,2 +1,55 @@
 /* Shared-style */
-@import url("home.css")
+/* Linked on every page. */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap");
+@import url("base.css");
+@import url("home.css");
+@import url("shop.css");
+@import url("builder.css");
+@import url("contact.css");
+
+/* Responsive (Member 1) */
+.site-header {
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.product-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 900px) {
+    .site-header {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.nav-list {
+    justify-content: center;
+}
+
+.product-grid {
+    grid-template-columns: 1fr;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-list {
+        justify-content: center;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
