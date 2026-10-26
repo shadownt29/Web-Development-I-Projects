@@ -7,49 +7,31 @@
 @import url("builder.css");
 @import url("contact.css");
 
-/* Responsive (Member 1) */
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+/* Nav bar */
 .site-header {
-    flex-direction: column;
-    gap: 0.75rem;
+    background-color: bisque;
+    border-bottom: 1px solid #ededed;
+    padding: 1.8em 0;
 }
 
-.product-grid {
-    grid-template-columns: repeat(2, 1fr);
+.site-nav {
+    max-width: 925px;
+    margin: 0 auto 0 110px;
 }
 
-@media screen and (max-width: 900px) {
-    .site-header {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.nav-list {
-    justify-content: center;
-}
-
-.product-grid {
-    grid-template-columns: 1fr;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-@media screen and (max-width: 600px) {
-    .nav-list {
-        justify-content: center;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
 }
