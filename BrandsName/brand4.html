@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alienware</title>
+    <link rel="stylesheet" href="brands.css">
+</head>
+<body>
+    <div class="brand-logo">
+        <img src="../assets/brands/image4.png" alt="Brand 1">
+        <p class="alienware">Alienware</p>
+    </div>
+    <h3>Monitors</h3>
+    <div class="brand-products">
+        <div class="product-card-link" onclick="openDetail('AW2724HF 27&quot; 500Hz Gaming Monitor', '399$', '../assets/Brand4/monitor1.png', 'The Alienware AW2724HF delivers blistering 500Hz refresh rates and Fast IPS technology designed for elite competitive esports gameplay.', ['500Hz Refresh Rate: Extreme speed for competitive gaming advantage.', 'Fast IPS Panel: Vibrant colors and 0.5ms GTG minimum response time.', 'AMD FreeSync Premium & VESA AdaptiveSync: Tear-free visual clarity.', 'Ergonomic Stand: Height, tilt, swivel, and pivot adjustments with cable management.'], 'Dark Moon / Black', 'In Stock', 'Alienware / Monitors')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand4/monitor1.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">AW2724HF</p>
+                <div class="price">
+                    <p>Alienware</p>
+                    <p>399$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('AW3821DW 37.5&quot; Curved Gaming Monitor', '1099$', '../assets/Brand4/monitor2.png', 'Immerse yourself in expansive ultrawide visual glory with Fast IPS Nano Color technology and NVIDIA G-SYNC ULTIMATE performance.', ['37.5-inch WQHD+ (3840 x 1600) Curved Screen: Ultra-wide 21:9 panoramic field of view.', 'NVIDIA G-SYNC ULTIMATE: Hardware-certified smooth HDR gaming.', 'Fast IPS Nano Color: 95% DCI-P3 color coverage with wide viewing angles.', 'AlienFX RGB Lighting: Customizable multi-zone rear ambient backlighting.'], 'Lunar Light', 'In Stock', 'Alienware / Monitors')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand4/monitor2.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">AW3821DW</p>
+                <div class="price">
+                    <p>Alienware</p>
+                    <p>1099$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('AW2521H 24.5&quot; 360Hz Gaming Monitor', '379$', '../assets/Brand4/monitor4.png', 'Engineered for competitive esports titles, combining a lightning-fast 360Hz refresh rate with the NVIDIA Reflex Latency Analyzer.', ['360Hz Refresh Rate: Built for tournament-level FPS motion clarity.', 'NVIDIA Reflex Latency Analyzer: Measures end-to-end system latency accurately.', 'Fast IPS Technology: True 1ms response time without ghosting.', 'Iconic Legend Industrial Design: Premium build with optimized cooling vents.'], 'Dark Side of the Moon', 'In Stock', 'Alpha / Monitors')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand4/monitor4.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">AW2521H 24.5" 360Hz Gaming Monitor</p>
+                <div class="price">
+                    <p>Alpha</p>
+                    <p>379$</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Mousepads</h3>
+    <div class="brand-products">
+        <div class="product-card-link" onclick="openDetail('Alienware Gaming Mouse Mat (AW3821DW Edition)', '1099$', '../assets/Brand4/mousepad1.png', 'Premium desk pad engineered with micro-textured fabric for precise mouse tracking and stitched anti-fray edges.', ['Extra Large Surface Area: Accommodates full-size keyboard and gaming mouse.', 'Micro-Textured Cloth Surface: Balanced glide for precision optical sensors.', 'Anti-Slip Rubber Base: Keeps mousepad firmly anchored during heavy swipe motions.', 'Stitched Anti-Fray Edges: Long-lasting durability against wear and tear.'], 'Lunar Light / Black', 'In Stock', 'Alienware / Mousepads')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand4/mousepad1.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">AW3821DW</p>
+                <div class="price">
+                    <p>Alienware</p>
+                    <p>1099$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('Alienware Gaming Desk Mat (AW3423DWF Edition)', '799$', '../assets/Brand4/mousepad2.png', 'Extended gaming surface featuring water-resistant coating and low-friction weave for effortless tracking accuracy.', ['Water-Resistant Surface Coating: Easily repels accidental spills and moisture.', 'Low-Friction Weave Surface: Rapid mouse glides tailored for high-DPI gaming.', 'Heavy-Duty Rubberized Base: Eliminates unwanted slipping on glass and wood surfaces.', 'Premium Edge Stitching: Designed to maintain structural integrity over time.'], 'Dark Moon', 'In Stock', 'Alienware / Mousepads')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand4/mousepad2.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">AW3423DWF</p>
+                <div class="price">
+                    <p>Alienware</p>
+                    <p>799$</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <dialog id="product-detail-dialog">
+        <button class="close-detail-btn" onclick="closeDetail()">&times;</button>
+        <div class="detail-container">
+            <div class="detail-left">
+                <img id="detail-image" alt="Product Image">
+            </div>
+            <div class="detail-right">
+                <h2 id="detail-title"></h2>
+                <p id="detail-desc"></p>
+                <ul id="detail-specs"></ul>
+                <div class="detail-price" id="detail-price"></div>
+                <div class="detail-meta">Color : <span id="detail-color" style="color: #111; font-weight: normal;"></span></div>
+                <div class="detail-meta">Availability : <span class="in-stock" id="detail-stock"></span></div>
+                <div class="detail-category" id="detail-category"></div>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        const dialog = document.getElementById('product-detail-dialog')
+        const detailImg = document.getElementById('detail-image')
+        const detailTitle = document.getElementById('detail-title')
+        const detailDesc = document.getElementById('detail-desc')
+        const detailSpecs = document.getElementById('detail-specs')
+        const detailPrice = document.getElementById('detail-price')
+        const detailColor = document.getElementById('detail-color')
+        const detailStock = document.getElementById('detail-stock')
+        const detailCategory = document.getElementById('detail-category')
+
+        function openDetail(title, price, imgSrc, description, specsArray, color, stock, category) {
+            detailTitle.textContent = title;
+            detailPrice.textContent = price;
+            detailImg.src = imgSrc;
+            detailDesc.textContent = description;
+            detailColor.textContent = color;
+            detailCategory.textContent = category;
+            detailStock.textContent = stock;
+
+            detailSpecs.innerHTML = '';
+            specsArray.forEach(spec => {
+                const li = document.createElement('li');
+                li.textContent = spec;
+                detailSpecs.appendChild(li);
+            });
+
+            dialog.showModal();
+        }
+        function closeDetail() {
+            dialog.close();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('product-detail-dialog').addEventListener('click', function(event) {
+                if(event.target === this) {
+                    closeDetail()
+                }
+            })
+        })
+    </script>
+</body>
+</html>
