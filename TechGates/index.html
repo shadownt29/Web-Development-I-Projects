@@ -30,9 +30,9 @@
         </header>
 
         <main id="main">
-            <section class="home-hero" aria-labelledby="home-hero-title">
+            <section class="home-hero">
                 <div class="site-container">
-                    <h1 class="home-hero-title" id="home-hero-title">
+                    <h1 class="home-hero-title">
                         <span>Build it.</span>
                         <span>Game on it.</span>
                         <span>Get it here.</span>
@@ -44,17 +44,19 @@
                         <a class="site-btn site-btn-primary" href="Shop/shop.html">Shop now</a>
                         <a class="site-btn site-btn-outline" href="custom_builder_guide.html">Read the build guide</a>
                     </div>
+                    <img class="home-hero-image" src="assets/images/hero-laptop.svg" alt="" width="800" height="410" />
                 </div>
             </section>
 
-            <section class="home-categories" aria-labelledby="home-categories-title">
+            <section class="home-categories">
                 <div class="site-container">
-                    <h2 id="home-categories-title">Shop by category</h2>
+                    <h2>Shop by category</h2>
                     <ul class="home-category-list">
                         <li>
                             <a class="home-category-tile" href="Shop/category.html">
                                 <h3>Laptops</h3>
                                 <p>For class, work, and games on the go.</p>
+                                <img class="home-category-image" src="assets/images/laptop.svg" alt="" width="400" height="230" loading="lazy" />
                                 <span class="home-category-action">Shop laptops</span>
                             </a>
                         </li>
@@ -62,6 +64,7 @@
                             <a class="home-category-tile" href="Shop/category.html">
                                 <h3>Gaming PCs</h3>
                                 <p>Ready-built desktops for games and heavy apps.</p>
+                                <img class="home-category-image" src="assets/images/desktop-pc.svg" alt="" width="400" height="250" loading="lazy" />
                                 <span class="home-category-action">Shop gaming PCs</span>
                             </a>
                         </li>
@@ -69,6 +72,7 @@
                             <a class="home-category-tile" href="Shop/category.html">
                                 <h3>PC parts</h3>
                                 <p>Processors, graphics cards, memory, and storage.</p>
+                                <img class="home-category-image" src="assets/images/graphics-card.svg" alt="" width="400" height="206" loading="lazy" />
                                 <span class="home-category-action">Shop PC parts</span>
                             </a>
                         </li>
@@ -76,6 +80,7 @@
                             <a class="home-category-tile" href="Shop/category.html">
                                 <h3>Peripherals</h3>
                                 <p>Keyboards, mice, headsets, and monitors.</p>
+                                <img class="home-category-image" src="assets/images/keyboard.svg" alt="" width="400" height="200" loading="lazy" />
                                 <span class="home-category-action">Shop peripherals</span>
                             </a>
                         </li>
@@ -83,16 +88,57 @@
                 </div>
             </section>
 
-            <section class="home-guide" aria-labelledby="home-guide-title">
+            <section class="home-featured">
+                <div class="site-container">
+                    <h2>Featured products</h2>
+                    <!-- Placeholder products and prices. Match them with the Shop product table. -->
+                    <ul class="home-product-list">
+                        <li>
+                            <a class="home-product-card" href="Shop/shop.html">
+                                <img src="assets/images/laptop.svg" alt="" width="400" height="230" loading="lazy" />
+                                <h3>Gaming laptop 15.6&quot;</h3>
+                                <p>Core i5, RTX 4050, 16 GB RAM, 512 GB SSD</p>
+                                <p class="home-product-price">$949</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="home-product-card" href="Shop/shop.html">
+                                <img src="assets/images/desktop-pc.svg" alt="" width="400" height="250" loading="lazy" />
+                                <h3>Gaming PC</h3>
+                                <p>Ryzen 5, RTX 4060, 16 GB RAM, 1 TB SSD</p>
+                                <p class="home-product-price">$1,099</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="home-product-card" href="Shop/shop.html">
+                                <img src="assets/images/graphics-card.svg" alt="" width="400" height="206" loading="lazy" />
+                                <h3>Graphics card</h3>
+                                <p>RTX 4060, 8 GB GDDR6</p>
+                                <p class="home-product-price">$329</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="home-product-card" href="Shop/shop.html">
+                                <img src="assets/images/monitor.svg" alt="" width="400" height="252" loading="lazy" />
+                                <h3>Gaming monitor 27&quot;</h3>
+                                <p>1440p, 165 Hz, IPS</p>
+                                <p class="home-product-price">$279</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="home-guide">
                 <div class="site-container home-guide-inner">
                     <div class="home-guide-intro">
-                        <h2 id="home-guide-title">Not sure what to buy? Read the hardware guide first.</h2>
+                        <h2>Not sure what to buy? Read the hardware guide first.</h2>
                         <p>
                             The guide explains what each part does in plain language, so you can pick specs that fit how you use your PC.
                         </p>
                         <a class="site-btn site-btn-accent" href="custom_builder_guide.html">Open the build guide</a>
                     </div>
-                    <ol class="home-guide-steps" role="list">
+                    <ol class="home-guide-steps">
                         <li>
                             <h3>Pick your use</h3>
                             <p>Gaming, study, or editing. It decides which parts matter most.</p>
@@ -109,9 +155,9 @@
                 </div>
             </section>
 
-            <section class="home-help" aria-labelledby="home-help-title">
+            <section class="home-help">
                 <div class="site-container">
-                    <h2 id="home-help-title">Still deciding?</h2>
+                    <h2>Still deciding?</h2>
                     <ul class="home-help-list">
                         <li>
                             <h3>Reviews and FAQs</h3>

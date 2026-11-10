@@ -1,6 +1,6 @@
 /* Sin - shared design: tokens, reset, header, footer, buttons */
 
-/* ---------- Tokens ---------- */
+/* Tokens */
 :root {
     --color-ink: #1d1d1f;
     --color-muted: #515154;
@@ -21,11 +21,15 @@
     --radius-pill: 999px;
 }
 
-/* ---------- Reset ---------- */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none !important;
+    }
 }
 
 img {
@@ -39,7 +43,7 @@ ol {
     list-style: none;
 }
 
-/* ---------- Page defaults ---------- */
+/* Page defaults */
 body {
     display: flex;
     flex-direction: column;
@@ -85,7 +89,7 @@ h3 {
     outline-offset: 3px;
 }
 
-/* ---------- Layout helpers ---------- */
+/* Layout helpers */
 .site-container {
     width: min(var(--page-width), 100% - 2.5rem);
     margin-inline: auto;
@@ -93,13 +97,17 @@ h3 {
 
 .site-section {
     padding-block: 3.5rem;
+
+    @media (min-width: 48rem) {
+        padding-block: 5rem;
+    }
 }
 
 .site-section-alt {
     background: var(--color-surface);
 }
 
-/* ---------- Buttons and links ---------- */
+/* Buttons and links */
 .site-btn {
     display: inline-flex;
     align-items: center;
@@ -120,30 +128,30 @@ h3 {
 .site-btn-primary {
     background: var(--color-brand);
     color: var(--color-white);
-}
 
-.site-btn-primary:hover {
-    background: var(--color-brand-dark);
+    &:hover {
+        background: var(--color-brand-dark);
+    }
 }
 
 .site-btn-outline {
     border-color: var(--color-brand);
     background: transparent;
     color: var(--color-brand);
-}
 
-.site-btn-outline:hover {
-    background: var(--color-brand);
-    color: var(--color-white);
+    &:hover {
+        background: var(--color-brand);
+        color: var(--color-white);
+    }
 }
 
 .site-btn-accent {
     background: var(--color-accent);
     color: var(--color-ink);
-}
 
-.site-btn-accent:hover {
-    background: var(--color-accent-dark);
+    &:hover {
+        background: var(--color-accent-dark);
+    }
 }
 
 .site-link {
@@ -151,14 +159,14 @@ h3 {
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 0.2em;
+
+    &:hover {
+        color: var(--color-brand-dark);
+        text-decoration-thickness: 2px;
+    }
 }
 
-.site-link:hover {
-    color: var(--color-brand-dark);
-    text-decoration-thickness: 2px;
-}
-
-/* ---------- Skip link ---------- */
+/* Skip link */
 .site-skip {
     position: absolute;
     top: -4rem;
@@ -168,16 +176,25 @@ h3 {
     border-radius: 0.5rem;
     background: var(--color-ink);
     color: var(--color-white);
+
+    &:focus {
+        top: 1rem;
+    }
 }
 
-.site-skip:focus {
-    top: 1rem;
-}
-
-/* ---------- Header ---------- */
+/* Header */
 .site-header {
     background: rgb(255 255 255 / 0.95);
     border-bottom: 1px solid var(--color-line);
+
+    @media (min-width: 56rem) {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgb(255 255 255 / 0.85);
+        -webkit-backdrop-filter: saturate(180%) blur(16px);
+        backdrop-filter: saturate(180%) blur(16px);
+    }
 }
 
 .site-nav {
@@ -189,6 +206,12 @@ h3 {
     width: min(var(--page-width), 100% - 2.5rem);
     margin-inline: auto;
     padding-block: 0.5rem;
+
+    @media (min-width: 56rem) {
+        justify-content: space-between;
+        min-height: 4rem;
+        padding-block: 0;
+    }
 }
 
 .site-logo img {
@@ -202,47 +225,30 @@ h3 {
     align-items: center;
     justify-content: center;
     gap: 0 clamp(1rem, 2.2vw, 2rem);
-}
 
-.site-menu a {
-    display: block;
-    padding: 0.75rem 0;
-    border-bottom: 2px solid transparent;
-    color: var(--color-muted);
-    font-size: 0.9375rem;
-    font-weight: 500;
-    line-height: 1.5;
-    text-decoration: none;
-    transition: color 0.15s;
-}
+    & a {
+        display: block;
+        padding: 0.75rem 0;
+        border-bottom: 2px solid transparent;
+        color: var(--color-muted);
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 1.5;
+        text-decoration: none;
+        transition: color 0.15s;
 
-.site-menu a:hover {
-    color: var(--color-ink);
-}
+        &:hover {
+            color: var(--color-ink);
+        }
 
-.site-menu a[aria-current="page"] {
-    border-bottom-color: var(--color-accent);
-    color: var(--color-ink);
-}
-
-@media (min-width: 56rem) {
-    .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        background: rgb(255 255 255 / 0.85);
-        -webkit-backdrop-filter: saturate(180%) blur(16px);
-        backdrop-filter: saturate(180%) blur(16px);
-    }
-
-    .site-nav {
-        justify-content: space-between;
-        min-height: 4rem;
-        padding-block: 0;
+        &[aria-current="page"] {
+            border-bottom-color: var(--color-accent);
+            color: var(--color-ink);
+        }
     }
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 .site-footer {
     padding: 3rem 0 2rem;
     border-top: 1px solid var(--color-line);
@@ -254,6 +260,10 @@ h3 {
 .site-footer-top {
     display: grid;
     gap: 2rem;
+
+    @media (min-width: 48rem) {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
 }
 
 .site-footer-name {
@@ -278,33 +288,22 @@ h3 {
     line-height: 1.5;
 }
 
-.site-footer-links a {
-    display: inline-block;
-    padding: 0.25rem 0;
-    color: var(--color-muted);
-    text-decoration: none;
-}
+.site-footer-links {
+    & a {
+        display: inline-block;
+        padding: 0.25rem 0;
+        color: var(--color-muted);
+        text-decoration: none;
 
-.site-footer-links a:hover {
-    color: var(--color-ink);
-    text-decoration: underline;
+        &:hover {
+            color: var(--color-ink);
+            text-decoration: underline;
+        }
+    }
 }
 
 .site-footer-legal {
     margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--color-line);
-}
-
-@media (min-width: 48rem) {
-    .site-footer-top {
-        grid-template-columns: 2fr 1fr 1fr;
-    }
-}
-
-/* ---------- Motion ---------- */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
-    }
 }

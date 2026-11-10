@@ -1,8 +1,12 @@
 /* Sin - About page (about_us.html). Every class here starts with "about-". */
 
-/* ---------- Intro ---------- */
+/* Intro */
 .about-intro {
     padding: 4rem 0 3rem;
+
+    @media (min-width: 48rem) {
+        padding: 6rem 0 4rem;
+    }
 }
 
 .about-intro-inner {
@@ -22,31 +26,44 @@
     line-height: 1.65;
 }
 
-/* ---------- What you can do ---------- */
+/* What you can do */
 .about-services {
     padding-bottom: 4rem;
+
+    @media (min-width: 48rem) {
+        padding-bottom: 5rem;
+    }
 }
 
 .about-services-list {
     display: grid;
     gap: 2rem;
     margin-top: 2rem;
+
+    @media (min-width: 48rem) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    & li {
+        padding-top: 1.5rem;
+        border-top: 2px solid var(--color-brand);
+    }
+
+    & p {
+        margin: 0.5rem 0 1rem;
+        color: var(--color-muted);
+    }
 }
 
-.about-services-list li {
-    padding-top: 1.5rem;
-    border-top: 2px solid var(--color-brand);
-}
-
-.about-services-list p {
-    margin: 0.5rem 0 1rem;
-    color: var(--color-muted);
-}
-
-/* ---------- Team ---------- */
+/* Team */
 .about-team {
     padding: 4rem 0;
     background: var(--color-surface);
+
+    @media (min-width: 48rem) {
+        padding-block: 5rem;
+    }
 }
 
 .about-team-text {
@@ -59,19 +76,27 @@
     display: grid;
     gap: 2rem 1.5rem;
     margin-top: 2.5rem;
+
+    @media (min-width: 40rem) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 64rem) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    & li {
+        padding-top: 1rem;
+        border-top: 1px solid var(--color-line);
+    }
+
+    & p {
+        margin-top: 0.25rem;
+        color: var(--color-muted);
+    }
 }
 
-.about-team-list li {
-    padding-top: 1rem;
-    border-top: 1px solid var(--color-line);
-}
-
-.about-team-list p {
-    margin-top: 0.25rem;
-    color: var(--color-muted);
-}
-
-/* ---------- Contact ---------- */
+/* Contact */
 .about-contact {
     padding: 4rem 0 5rem;
 }
@@ -81,45 +106,15 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
-}
 
-.about-contact-inner p {
-    margin-top: 0.5rem;
-    color: var(--color-muted);
-}
-
-/* ---------- Wider screens ---------- */
-@media (min-width: 48rem) {
-    .about-intro {
-        padding: 6rem 0 4rem;
-    }
-
-    .about-services {
-        padding-bottom: 5rem;
-    }
-
-    .about-services-list {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2.5rem;
-    }
-
-    .about-team {
-        padding: 5rem 0;
-    }
-
-    .about-team-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-contact-inner {
+    @media (min-width: 48rem) {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
-}
 
-@media (min-width: 64rem) {
-    .about-team-list {
-        grid-template-columns: repeat(4, 1fr);
+    & p {
+        margin-top: 0.5rem;
+        color: var(--color-muted);
     }
 }
