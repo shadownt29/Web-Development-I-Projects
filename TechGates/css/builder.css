@@ -1,0 +1,201 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { 
+    background-color: #f5f6f8; 
+    padding-bottom: 50px; 
+    color: #333;
+}
+
+a { 
+    text-decoration: none; 
+    color: #333; 
+}
+
+
+.site-header {
+    background-color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.brand-name { font-size: 24px; font-weight: bold; }
+.site-nav ul { list-style: none; display: flex; gap: 20px; }
+.site-nav a:hover { color: #007bff; }
+
+
+.builder-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* =========================================
+   4. BUDGET SECTION
+   ========================================= */
+.budget-setup {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+.budget-setup h2 { font-size: 20px; margin-bottom: 15px; }
+.budget-form { display: flex; max-width: 350px; }
+.budget-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+}
+.btn-apply {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+.btn-apply:hover { background: #555; }
+
+/* =========================================
+   5. TWO COLUMN LAYOUT
+   ========================================= */
+.builder-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.build-summary {
+    flex: 4;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+.components {
+    flex: 6;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+/* =========================================
+   6. LEFT SIDE (BUILD SUMMARY)
+   ========================================= */
+.build-summary h1 { font-size: 22px; margin-bottom: 20px; }
+.divider { border: none; border-top: 1px solid #eee; margin-bottom: 20px; }
+.total-row { display: flex; justify-content: space-between; font-weight: bold; font-size: 20px; margin-bottom: 25px; }
+.button-row { display: flex; gap: 10px; }
+.button-row button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.btn-reset { background: #e9b3b3; color: white; border: none; }
+.btn-reset:hover { background: #dfa0a0; }
+.btn-share { background: #979fa6; color: white; border: none; }
+.btn-share:hover { background: #828a91; }
+.btn-image { background: white; border: 1px solid #ccc; color: #555; }
+.btn-image:hover { background: #f0f0f0; }
+
+/* =========================================
+   7. RIGHT SIDE (COMPONENTS DROPDOWNS)
+   ========================================= */
+.components h2 { font-size: 22px; margin-bottom: 20px; }
+.component-list { display: flex; flex-direction: column; }
+.component-item { margin-bottom: 10px; }
+
+summary::-webkit-details-marker { display: none; }
+summary { list-style: none; cursor: pointer; }
+
+.component-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: white;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+summary.component-row:hover { background: #f0f0f0; }
+
+details[open] .component-row {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #f9f9f9;
+}
+
+.part-name { font-weight: bold; }
+.part-count { color: #777; font-weight: normal; }
+
+.part-options {
+    border: 1px solid #333;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    padding: 5px;
+    background: white;
+}
+
+.option-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+.option-row:hover { background: #eef2f5; }
+.option-row:last-child { border-bottom: none; }
+
+.option-info { display: flex; align-items: center; gap: 15px; }
+.part-img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.part-details { display: flex; flex-direction: column; }
+.part-title { font-weight: 600; color: #111; font-size: 15px; }
+.part-spec { font-size: 12px; color: #777; }
+.part-price { color: #28a745; font-weight: bold; font-size: 16px; }
+
+/* =========================================
+   8. GUIDE TABLE
+   ========================================= */
+.guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.guide-table caption { font-size: 24px; font-weight: bold; margin-bottom: 15px; text-align: left; }
+.guide-table th, .guide-table td { border: 1px solid #ddd; padding: 12px 15px; text-align: left; }
+.guide-table th { background-color: #f4f4f4; font-weight: bold; }
+
+/* =========================================
+   9. FOOTER
+   ========================================= */
+.site-footer { text-align: center; padding: 30px; color: #777; font-size: 14px; }

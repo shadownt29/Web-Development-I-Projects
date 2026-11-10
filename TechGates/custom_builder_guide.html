@@ -30,8 +30,441 @@
             </nav>
         </header>
 
-        <main id="main">
-            <!-- Page content goes here. Keep the header and footer as they are. -->
+        <main class="builder-page" id="main">
+            
+            <!-- BUDGET INPUT -->
+            <section class="budget-setup">
+                <h2>Set Your Budget</h2>
+                <div class="budget-form">
+                    <input type="number" placeholder="Enter your Budget" />
+                    <button type="button" class="btn-apply">Apply</button>
+                </div>
+            </section>
+
+
+            <div class="builder-layout">
+
+                <!-- BUILD SUMMARY -->
+                <section class="build-summary">
+                    <h1>Your Build</h1>
+                    <p>No components selected yet.</p>
+                    <hr class="divider">
+                    <div class="total-row">
+                        <span>Total</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="button-row">
+                        <button class="btn-reset" type="button">Reset Build</button>
+                    </div>
+                </section>
+
+                <!-- COMPONENTS LIST -->
+                <section class="components">
+                    <h2>Components</h2>
+
+                    <div class="component-list">
+                        
+                        <!-- CPU -->
+                        <details class="component-item">
+                            <summary class="component-row">
+                                <span class="part-name">CPU</span>
+                                <span class="part-count">0/1</span>
+                            </summary>
+                            <div class="part-options">
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/cpu/Ryzen™ 5 5600X 159$.webp" alt="AMD Ryzen 5 5600X" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">AMD Ryzen 5 5600X</span>
+                                            <span class="part-spec">6-Core, 4.6GHz Turbo</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$159</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/cpu/Ryzen™ 7 5800X 229.webp" alt="AMD Ryzen 7 5800X" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">AMD Ryzen 7 5800X</span>
+                                            <span class="part-spec">8-Core, 4.7GHz Turbo</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$229</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/cpu/Ryzen™ 9 7950X 429.webp" alt="AMD Ryzen 9 7950X" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">AMD Ryzen 9 7950X</span>
+                                            <span class="part-spec">16-Core, 5.7GHz Turbo</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$429</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- GRAPHICS CARD -->
+                        <details class="component-item">
+                            <summary class="component-row">
+                                <span class="part-name">Graphics Card</span>
+                                <span class="part-count">0/1</span>
+                            </summary>
+                            <div class="part-options">
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/gpu/AORUS_Master_RTX_5070_Ti_OC_16_GB_1299.webp" alt="AORUS RTX 5070 Ti" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">AORUS GeForce RTX 5070 Ti MASTER</span>
+                                            <span class="part-spec">16GB GDDR7</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$1299</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/gpu/Dual GeForce RTX™ 5060 8GB GDDR7 499.webp" alt="ASUS RTX 5060" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">ASUS Dual GeForce RTX 5060</span>
+                                            <span class="part-spec">8GB GDDR7</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$499</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/gpu/GeForce RTX™ 5060 Ti 16GB Twin X2 899.webp" alt="INNO3D RTX 5060 Ti" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">INNO3D RTX 5060 Ti TWIN X2</span>
+                                            <span class="part-spec">16GB GDDR7 White</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$899</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- MOTHERBOARD -->
+                        <details class="component-item">
+                            <summary class="component-row">
+                                <span class="part-name">Motherboard</span>
+                                <span class="part-count">0/1</span>
+                            </summary>
+                            <div class="part-options">
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/motherboard/B650M AORUS ELITE AX ICE 199.webp" alt="Gigabyte B650M AORUS ELITE" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Gigabyte B650M AORUS ELITE AX ICE</span>
+                                            <span class="part-spec">mATX, AM5, DDR5</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$199</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/motherboard/B650M BOMBER WIFI 139.webp" alt="MSI B650M BOMBER" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">MSI B650M BOMBER WIFI</span>
+                                            <span class="part-spec">mATX, AM5, DDR5</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$139</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/motherboard/B650M Gaming Plus WIFI 179.webp" alt="MSI B650M GAMING PLUS" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">MSI B650M GAMING PLUS WIFI</span>
+                                            <span class="part-spec">mATX, AM5, DDR5</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$179</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- RAM -->
+                        <details class="component-item">
+                            <summary class="component-row">
+                                <span class="part-name">RAM/Memory</span>
+                                <span class="part-count">0/4</span>
+                            </summary>
+                            <div class="part-options">
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/ram/Vengeance RGB 16GB (16GB x 1) DDR5 219.webp" alt="Corsair Vengeance RGB" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Corsair Vengeance RGB 16GB</span>
+                                            <span class="part-spec">DDR5</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$219</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/ram/VENGEANCE RGB Pro 16GB DDR5 149.webp" alt="Corsair Vengeance RGB PRO" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Corsair Vengeance RGB PRO 16GB</span>
+                                            <span class="part-spec">DDR5</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$149</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/ram/Viper Venom RGB DDR5 32G (32G x 1) 459.webp" alt="Patriot Viper Venom RGB" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Patriot Viper Venom RGB 32GB</span>
+                                            <span class="part-spec">DDR5</span>
+                                        </div>
+                                    </div>
+                                    <!-- Added the missing $ sign here -->
+                                    <span class="part-price">$459</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- STORAGE -->
+                        <details class="component-item">
+                            <summary class="component-row">
+                                <span class="part-name">Storage</span>
+                                <span class="part-count">0/4</span>
+                            </summary>
+                            <div class="part-options">
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/ssd/980 (1TB) Samsung 219.webp" alt="Samsung 980 1TB" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Samsung 980 NVMe M.2</span>
+                                            <span class="part-spec">1TB SSD</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$219</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/ssd/990 Pro (2TB) Smasung 349.webp" alt="Samsung 990 PRO 2TB" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Samsung 990 PRO NVMe M.2</span>
+                                            <span class="part-spec">2TB SSD, PCIe 4.0</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$349</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/ssd/Samsung 980 (500GB) 129.webp" alt="Samsung 980 500GB" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Samsung 980 NVMe M.2</span>
+                                            <span class="part-spec">500GB SSD</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$129</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- POWER SUPPLY -->
+                        <details class="component-item">
+                            <summary class="component-row">
+                                <span class="part-name">Power Supply</span>
+                                <span class="part-count">0/1</span>
+                            </summary>
+                            <div class="part-options">
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/psu/LOKI SFX-L 850W Platinum Black Edition 249.webp" alt="ASUS ROG LOKI 850W" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">ASUS ROG LOKI 850W Platinum</span>
+                                            <span class="part-spec">SFX-L, ATX 3.1</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$249</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/psu/MAG A1000GL 159.webp" alt="MSI MAG A1000GL" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">MSI MAG A1000GL PCIE5</span>
+                                            <span class="part-spec">1000W, ATX 3.0</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$159</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/psu/MAG A1250GL 209.webp" alt="MSI MAG A1250GL" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">MSI MAG A1250GL PCIE5</span>
+                                            <span class="part-spec">1250W, ATX 3.1</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$209</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- CASE -->
+                        <details class="component-item">
+                            <summary class="component-row">
+                                <span class="part-name">Case</span>
+                                <span class="part-count">0/1</span>
+                            </summary>
+                            <div class="part-options">
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/case/A 21 79.webp" alt="A 21 Case" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">A 21 Case</span>
+                                            <span class="part-spec">mATX, Black Mesh</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$79</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/case/A70 VISION 199.webp" alt="A70 VISION Case" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">A70 VISION Case</span>
+                                            <span class="part-spec">Mid-Tower, Tempered Glass</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$199</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/case/H4 Mini 35.webp" alt="H4 Mini Case" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">H4 Mini Case</span>
+                                            <span class="part-spec">Mini-ITX, Compact</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$35</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- COOLER -->
+                        <details class="component-item">
+                            <summary class="component-row">
+                                <span class="part-name">Cooler</span>
+                                <span class="part-count">0/1</span>
+                            </summary>
+                            <div class="part-options">
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/cooler/Aqua Elite 240 V2 59.webp" alt="Aqua Elite 240 V2" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Aqua Elite 240 V2</span>
+                                            <span class="part-spec">Liquid Cooler, 240mm</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$59</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/cooler/Core Matrix 240 Vision ARGB 79.webp" alt="Core Matrix 240 Vision" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Core Matrix 240 Vision ARGB</span>
+                                            <span class="part-spec">Liquid Cooler, 240mm</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$79</span>
+                                </div>
+                                <div class="option-row">
+                                    <div class="option-info">
+                                        <img src="assets/bulider/cooler/Frozen Vision 360 159.webp" alt="Frozen Vision 360" class="part-img">
+                                        <div class="part-details">
+                                            <span class="part-title">Frozen Vision 360</span>
+                                            <span class="part-spec">Liquid Cooler, 360mm</span>
+                                        </div>
+                                    </div>
+                                    <span class="part-price">$159</span>
+                                </div>
+                            </div>
+                        </details>
+
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- 3. HARDWARE GUIDE TABLE -->
+            <section class="guide-section">
+                <table class="guide-table">
+                    <caption>PC Building Guide</caption>
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Component / Action</th>
+                            <th>What to do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>CPU</td>
+                            <td>Install the CPU into the motherboard socket. Align the triangle marker correctly.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>RAM</td>
+                            <td>Insert RAM sticks into the recommended motherboard slots until they click.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>M.2 SSD</td>
+                            <td>Install the SSD into the M.2 slot and secure it with a screw.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>CPU Cooler</td>
+                            <td>Install the CPU cooler and connect its fan to CPU_FAN.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Motherboard</td>
+                            <td>Install the motherboard into the PC case using standoffs.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Power Supply (PSU)</td>
+                            <td>Install the PSU into the case.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>GPU</td>
+                            <td>Insert the graphics card into the PCIe x16 slot and secure it.</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Connect Cables</td>
+                            <td>Connect motherboard power, CPU power, GPU power, SATA, and case cables.</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Case Fans</td>
+                            <td>Install fans and connect them to fan headers or a fan hub.</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>First Boot</td>
+                            <td>Connect monitor, keyboard, and mouse. Turn on the PC and enter BIOS.</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Install OS</td>
+                            <td>Install Windows or Linux using a bootable USB.</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Install Drivers</td>
+                            <td>Install chipset, GPU, network, and audio drivers.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
 
         <footer class="site-footer">
