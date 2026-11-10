@@ -1,0 +1,188 @@
+.brand-logo {
+    text-align: center;
+}
+
+.brand-logo img {
+    width: 300px;
+}
+
+.brand-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card-link:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 320px;
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-sizing: border-box;    
+    overflow: hidden;  
+    background-color: #fff;
+}
+
+.image-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #000;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.brandName {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 0 0.5rem;
+}
+
+.price p {
+    margin: 0;
+    font-weight: bold;
+}
+h3{
+    display: flex;
+    justify-content: start;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+.coolers{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+}
+.alienware{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+#product-detail-dialog {
+    padding: 30px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    width: 750px;
+    max-width: 95%;
+    background: #ffffff;
+    position: relative;
+}
+#product-detail-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+.detail-container {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+.detail-left {
+    flex: 1;
+    text-align: center;
+    margin: auto;
+}
+.detail-left img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+}
+.detail-right {
+    flex: 1.2;
+}
+.detail-right h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #111;
+}
+.detail-right p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.detail-right ul {
+    padding-left: 20px;
+    margin: 15px 0;
+    color: #444;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+.detail-right ul li {
+    margin-bottom: 6px;
+}
+.detail-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111;
+    margin: 15px 0 10px 0;
+}
+.detail-meta {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 5px 0;
+}
+.detail-meta span.in-stock {
+    color: #28a745;
+    font-weight: bold;
+}
+.detail-category {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.close-detail-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+.close-detail-btn:hover {
+    color: #111;
+}
+.product-card-link {
+    cursor: pointer;
+}

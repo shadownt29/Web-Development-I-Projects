@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brateck Brand</title>
+    <link rel="stylesheet" href="category.css">
+</head>
+<body>
+    <h3>Tables</h3>
+    <div class="brand-products">
+        <div class="product-card-link" onclick="openDetail('GMD02E-2 RGB','149$','../assets/Brand12/table1.png','The Brateck GMD02E-2 RGB gaming desk is designed for gaming setups, featuring RGB lighting and a modern desk design for an immersive gaming environment.',['RGB Lighting: Adds colorful lighting effects to your gaming setup.','Gaming Desk Design: Designed for gaming and computer setups.','Spacious Desktop: Provides room for monitors, keyboards, and accessories.','Modern Appearance: Stylish design for gaming rooms and offices.'], 'Black', 'In Stock', 'Brateck / Gaming Desks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand12/table1.png" alt="Brateck GMD02E-2 RGB">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">GMD02E-2 RGB</p>
+                <div class="price">
+                    <p>Brateck</p>
+                    <p>149$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('GMD14-2 InfinityGlow','229$','../assets/Brand12/table2.png','The Brateck GMD14-2 InfinityGlow is a modern gaming desk designed to enhance your gaming station with an attractive appearance, functional workspace, and lighting features.',['InfinityGlow Design: Stylish lighting-focused gaming desk appearance.','Gaming Workspace: Suitable for gaming monitors and computer accessories.','Modern Construction: Designed for a clean and organized setup.','Gaming Aesthetic: Enhances the appearance of gaming rooms.'],'Black','In Stock','Brateck / Gaming Desks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand12/table2.png" alt="Brateck GMD14-2 InfinityGlow">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">GMD14-2 InfinityGlow</p>
+                <div class="price">
+                    <p>Brateck</p>
+                    <p>229$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('GMD02E-2 RGB Gaming Desk','149$','../assets/Brand12/table3.png','The Brateck GMD02E-2 RGB gaming desk offers a dedicated workspace for gaming equipment, with an RGB gaming aesthetic and a practical desktop layout.',['RGB Lighting: Gaming-inspired colorful lighting effects.','Gaming Desk: Suitable for PC gaming setups.','Equipment Space: Room for monitors and gaming accessories.','Modern Design: Complements gaming rooms and workspaces.'],'Black','In Stock','Brateck / Gaming Desks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand12/table3.png" alt="Brateck GMD02E-2 RGB">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">GMD02E-2 RGB</p>
+                <div class="price">
+                    <p>Brateck</p>
+                    <p>149$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('Ergonomic Z1-S','159$','../assets/Brand12/table4.png','The Brateck Ergonomic Z1-S is designed to provide a comfortable and functional workstation for computer users, studying, and everyday office activities.',['Ergonomic Design: Designed for a practical workstation.','Spacious Surface: Provides workspace for computers and accessories.','Modern Style: Suitable for home and office environments.','Multi-purpose Use: Ideal for working, studying, and computing.'],'Black','In Stock','Brateck / Ergonomic Desks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand12/table4.png" alt="Brateck Ergonomic Z1-S">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">Ergonomic Z1-S</p>
+                <div class="price">
+                    <p>Brateck</p>
+                    <p>159$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('Mars 120','199$','../assets/Brand12/table5.png','The Brateck Mars 120 is a modern desk designed to provide a practical and organized workspace for gaming, studying, and everyday computer use.',['120cm Desk Design: Designed for a dedicated computer workspace.','Gaming Workspace: Suitable for monitors and gaming equipment.','Modern Appearance: Complements contemporary room setups.','Multi-purpose Desk: Suitable for gaming, studying, and office work.'],'Black','In Stock','Brateck / Gaming Desks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/Brand12/table5.png" alt="Brateck Mars 120">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">Mars 120</p>
+                <div class="price">
+                    <p>Brateck</p>
+                    <p>199$</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="product-detail-dialog">
+        <button class="close-detail-btn" onclick="closeDetail()">&times;</button>
+        <div class="detail-container">
+            <div class="detail-left">
+                <img id="detail-image" alt="Product Image">
+            </div>
+            <div class="detail-right">
+                <h2 id="detail-title"></h2>
+                <p id="detail-desc"></p>
+                <ul id="detail-specs"></ul>
+                <div class="detail-price" id="detail-price"></div>
+                <div class="detail-meta">Color : <span id="detail-color" style="color: #111; font-weight: normal;"></span></div>
+                <div class="detail-meta">Availability : <span class="in-stock" id="detail-stock"></span></div>
+                <div class="detail-category" id="detail-category"></div>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        const dialog = document.getElementById('product-detail-dialog')
+        const detailImg = document.getElementById('detail-image')
+        const detailTitle = document.getElementById('detail-title')
+        const detailDesc = document.getElementById('detail-desc')
+        const detailSpecs = document.getElementById('detail-specs')
+        const detailPrice = document.getElementById('detail-price')
+        const detailColor = document.getElementById('detail-color')
+        const detailStock = document.getElementById('detail-stock')
+        const detailCategory = document.getElementById('detail-category')
+
+        function openDetail(title, price, imgSrc, description, specsArray, color, stock, category) {
+            detailTitle.textContent = title;
+            detailPrice.textContent = price;
+            detailImg.src = imgSrc;
+            detailDesc.textContent = description;
+            detailColor.textContent = color;
+            detailCategory.textContent = category;
+            detailStock.textContent = stock;
+
+            detailSpecs.innerHTML = '';
+            specsArray.forEach(spec => {
+                const li = document.createElement('li');
+                li.textContent = spec;
+                detailSpecs.appendChild(li);
+            });
+
+            dialog.showModal();
+        }
+        function closeDetail() {
+            dialog.close();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('product-detail-dialog').addEventListener('click', function(event) {
+                if(event.target === this) {
+                    closeDetail()
+                }
+            })
+        })
+    </script>
+</body>
+</html>
