@@ -1,12 +1,138 @@
+<!doctype html>
 <!-- Sin -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- </head>
- <body>
-    
- </body>
- </html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="About TechGates, a computer store in Phnom Penh, Cambodia, and the team behind it." />
+        <title>About Us | TechGates</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+    <body>
+        <a class="site-skip" href="#main">Skip to main content</a>
+
+        <header class="site-header">
+            <nav class="site-nav" aria-label="Main">
+                <a class="site-logo" href="index.html">
+                    <img src="assets/images/logo.png" alt="TechGates" width="198" height="52" />
+                </a>
+                <ul class="site-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Shop/shop.html">Shop</a></li>
+                        <li><a href="custom_builder_guide.html">Custom Builder</a></li>
+                        <li><a href="reviews_faqs.html">Reviews &amp; FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about_us.html" aria-current="page">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <section class="about-intro" aria-labelledby="about-title">
+                <div class="site-container">
+                    <div class="about-intro-inner">
+                        <h1 id="about-title">About TechGates</h1>
+                        <p class="about-lead">
+                            TechGates is a computer store in Phnom Penh, Cambodia. We sell gaming PCs, laptops, and parts, and we help you understand what you are buying before you pay for it.
+                        </p>
+                        <p class="about-text">
+                            Buying hardware usually means comparing long spec lists. TechGates puts a plain-language hardware guide next to the shop, so you can learn what each part does and choose what fits the way you use your computer.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-services" aria-labelledby="about-services-title">
+                <div class="site-container">
+                    <h2 id="about-services-title">What you can do here</h2>
+                    <ul class="about-services-list">
+                        <li>
+                            <h3>Shop</h3>
+                            <p>Browse laptops, gaming PCs, and parts by category or by brand.</p>
+                            <a class="site-link" href="Shop/shop.html">Go to the shop</a>
+                        </li>
+                        <li>
+                            <h3>Build</h3>
+                            <p>Use the guide to choose parts, then send us your build request.</p>
+                            <a class="site-link" href="custom_builder_guide.html">Open the build guide</a>
+                        </li>
+                        <li>
+                            <h3>Ask</h3>
+                            <p>Read reviews and answers to common questions, or message us directly.</p>
+                            <a class="site-link" href="reviews_faqs.html">Read reviews and FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="about-team" aria-labelledby="about-team-title">
+                <div class="site-container">
+                    <h2 id="about-team-title">The team</h2>
+                    <p class="about-team-text">
+                        TechGates is a final project for INFO 250 Web Development I at the American University of Phnom Penh. Four students built it, one part each.
+                    </p>
+                    <ul class="about-team-list">
+                        <li>
+                            <h3>Sin</h3>
+                            <p>Home, About Us, and the shared design</p>
+                        </li>
+                        <li>
+                            <h3>Sam</h3>
+                            <p>Shop and the product table</p>
+                        </li>
+                        <li>
+                            <h3>Chy</h3>
+                            <p>Custom Builder and Guide</p>
+                        </li>
+                        <li>
+                            <!-- TODO: replace "Member 4" with the real name -->
+                            <h3>Member 4</h3>
+                            <p>Reviews, FAQs, and Contact</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="about-contact" aria-labelledby="about-contact-title">
+                <div class="site-container about-contact-inner">
+                    <div>
+                        <h2 id="about-contact-title">Questions? Talk to us.</h2>
+                        <p>TechGates is based in Phnom Penh, Cambodia.</p>
+                    </div>
+                    <a class="site-btn site-btn-primary" href="contact.html">Contact us</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-container">
+                <div class="site-footer-top">
+                    <div>
+                        <p class="site-footer-name">TechGates</p>
+                        <p class="site-footer-about">
+                            A computer store in Phnom Penh, Cambodia. Gaming PCs, laptops, and parts, with a hardware guide before you buy.
+                        </p>
+                    </div>
+                    <nav aria-label="Footer: explore">
+                        <h2 class="site-footer-title">Explore</h2>
+                        <ul class="site-footer-links">
+                            <li><a href="Shop/shop.html">Shop</a></li>
+                            <li><a href="custom_builder_guide.html">Custom Builder</a></li>
+                            <li><a href="reviews_faqs.html">Reviews &amp; FAQs</a></li>
+                        </ul>
+                    </nav>
+                    <nav aria-label="Footer: company">
+                        <h2 class="site-footer-title">Company</h2>
+                        <ul class="site-footer-links">
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p class="site-footer-legal">&copy; 2026 TechGates. Phnom Penh, Cambodia.</p>
+            </div>
+        </footer>
+    </body>
+</html>

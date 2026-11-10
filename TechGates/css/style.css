@@ -1,37 +1,9 @@
-/* Shared-style */
-/* Linked on every page. */
+/* Shared-style (Sin) */
+/* Linked on every page. Only this file gets a <link> in the HTML. */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap");
 @import url("base.css");
 @import url("home.css");
+@import url("about.css");
 @import url("shop.css");
 @import url("builder.css");
 @import url("contact.css");
-
-
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
-
- a {
-    text-decoration: none;
- }
-
-/* Nav bar */
-.site-header {
-    background-color: bisque;
-    border-bottom: 1px solid #ededed;
-    padding: 1.8em 0;
-}
-
-.site-nav {
-    max-width: 925px;
-    margin: 0 auto 0 110px;
-}
-
-.site-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2.5rem;
-}

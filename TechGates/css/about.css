@@ -1,0 +1,125 @@
+/* Sin - About page (about_us.html). Every class here starts with "about-". */
+
+/* ---------- Intro ---------- */
+.about-intro {
+    padding: 4rem 0 3rem;
+}
+
+.about-intro-inner {
+    max-width: 46rem;
+}
+
+.about-lead {
+    margin-top: 1.5rem;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    line-height: 1.5;
+}
+
+.about-text {
+    margin-top: 1.25rem;
+    color: var(--color-muted);
+    font-size: 1.125rem;
+    line-height: 1.65;
+}
+
+/* ---------- What you can do ---------- */
+.about-services {
+    padding-bottom: 4rem;
+}
+
+.about-services-list {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-services-list li {
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--color-brand);
+}
+
+.about-services-list p {
+    margin: 0.5rem 0 1rem;
+    color: var(--color-muted);
+}
+
+/* ---------- Team ---------- */
+.about-team {
+    padding: 4rem 0;
+    background: var(--color-surface);
+}
+
+.about-team-text {
+    max-width: 40rem;
+    margin-top: 1rem;
+    color: var(--color-muted);
+}
+
+.about-team-list {
+    display: grid;
+    gap: 2rem 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.about-team-list li {
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-line);
+}
+
+.about-team-list p {
+    margin-top: 0.25rem;
+    color: var(--color-muted);
+}
+
+/* ---------- Contact ---------- */
+.about-contact {
+    padding: 4rem 0 5rem;
+}
+
+.about-contact-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.about-contact-inner p {
+    margin-top: 0.5rem;
+    color: var(--color-muted);
+}
+
+/* ---------- Wider screens ---------- */
+@media (min-width: 48rem) {
+    .about-intro {
+        padding: 6rem 0 4rem;
+    }
+
+    .about-services {
+        padding-bottom: 5rem;
+    }
+
+    .about-services-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .about-team {
+        padding: 5rem 0;
+    }
+
+    .about-team-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-contact-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 64rem) {
+    .about-team-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

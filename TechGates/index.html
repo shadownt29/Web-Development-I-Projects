@@ -1,44 +1,160 @@
-<!-- Sin -->
 <!doctype html>
+<!-- Sin -->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="TechGates sells gaming PCs, laptops, and parts in Phnom Penh, Cambodia, with a hardware guide before you buy." />
         <title>Home | TechGates</title>
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
-
     <body>
+        <a class="site-skip" href="#main">Skip to main content</a>
+
         <header class="site-header">
-            <a class="brand-name" href="index.html">TechGates</a>
-            <nav class="site-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Shop/shop.html">Shop</a></li>
-                    <li><a href="custom_builder_guide.html">Custom Builder</a></li>
-                    <li><a href="reviews_faqs.html">Reviews &amp; FAQs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about_us.html">About Us</a></li>
+            <nav class="site-nav" aria-label="Main">
+                <a class="site-logo" href="index.html">
+                    <img src="assets/images/logo.png" alt="TechGates" width="198" height="52" />
+                </a>
+                <ul class="site-menu">
+                        <li><a href="index.html" aria-current="page">Home</a></li>
+                        <li><a href="Shop/shop.html">Shop</a></li>
+                        <li><a href="custom_builder_guide.html">Custom Builder</a></li>
+                        <li><a href="reviews_faqs.html">Reviews &amp; FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main>
-            <section class="hero">
-                <h1>Build it. Game on it. Get it here.</h1>
-                <p>
-                    Gaming PCs, laptops, and parts, with a hardware guide before you buy.
-                </p>
-                <a class="btn" href="Shop/shop.html">Shop now</a>
-                <!-- TODO (Member 1): add laptop image in images/ -->
+        <main id="main">
+            <section class="home-hero" aria-labelledby="home-hero-title">
+                <div class="site-container">
+                    <h1 class="home-hero-title" id="home-hero-title">
+                        <span>Build it.</span>
+                        <span>Game on it.</span>
+                        <span>Get it here.</span>
+                    </h1>
+                    <p class="home-hero-text">
+                        Gaming PCs, laptops, and parts, with a hardware guide before you buy.
+                    </p>
+                    <div class="home-hero-actions">
+                        <a class="site-btn site-btn-primary" href="Shop/shop.html">Shop now</a>
+                        <a class="site-btn site-btn-outline" href="custom_builder_guide.html">Read the build guide</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home-categories" aria-labelledby="home-categories-title">
+                <div class="site-container">
+                    <h2 id="home-categories-title">Shop by category</h2>
+                    <ul class="home-category-list">
+                        <li>
+                            <a class="home-category-tile" href="Shop/category.html">
+                                <h3>Laptops</h3>
+                                <p>For class, work, and games on the go.</p>
+                                <span class="home-category-action">Shop laptops</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="home-category-tile" href="Shop/category.html">
+                                <h3>Gaming PCs</h3>
+                                <p>Ready-built desktops for games and heavy apps.</p>
+                                <span class="home-category-action">Shop gaming PCs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="home-category-tile" href="Shop/category.html">
+                                <h3>PC parts</h3>
+                                <p>Processors, graphics cards, memory, and storage.</p>
+                                <span class="home-category-action">Shop PC parts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="home-category-tile" href="Shop/category.html">
+                                <h3>Peripherals</h3>
+                                <p>Keyboards, mice, headsets, and monitors.</p>
+                                <span class="home-category-action">Shop peripherals</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="home-guide" aria-labelledby="home-guide-title">
+                <div class="site-container home-guide-inner">
+                    <div class="home-guide-intro">
+                        <h2 id="home-guide-title">Not sure what to buy? Read the hardware guide first.</h2>
+                        <p>
+                            The guide explains what each part does in plain language, so you can pick specs that fit how you use your PC.
+                        </p>
+                        <a class="site-btn site-btn-accent" href="custom_builder_guide.html">Open the build guide</a>
+                    </div>
+                    <ol class="home-guide-steps" role="list">
+                        <li>
+                            <h3>Pick your use</h3>
+                            <p>Gaming, study, or editing. It decides which parts matter most.</p>
+                        </li>
+                        <li>
+                            <h3>Learn the parts</h3>
+                            <p>Check what the processor, graphics card, memory, and storage do.</p>
+                        </li>
+                        <li>
+                            <h3>Send your build</h3>
+                            <p>Fill in the builder form with the parts you want.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="home-help" aria-labelledby="home-help-title">
+                <div class="site-container">
+                    <h2 id="home-help-title">Still deciding?</h2>
+                    <ul class="home-help-list">
+                        <li>
+                            <h3>Reviews and FAQs</h3>
+                            <p>Read what buyers say and find answers to common questions.</p>
+                            <a class="site-link" href="reviews_faqs.html">Read reviews and FAQs</a>
+                        </li>
+                        <li>
+                            <h3>Talk to us</h3>
+                            <p>Ask about a product, a build, or an order.</p>
+                            <a class="site-link" href="contact.html">Contact the store</a>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </main>
 
         <footer class="site-footer">
-            <p>&copy; 2026 TechGates. Phnom Penh, Cambodia.</p>
+            <div class="site-container">
+                <div class="site-footer-top">
+                    <div>
+                        <p class="site-footer-name">TechGates</p>
+                        <p class="site-footer-about">
+                            A computer store in Phnom Penh, Cambodia. Gaming PCs, laptops, and parts, with a hardware guide before you buy.
+                        </p>
+                    </div>
+                    <nav aria-label="Footer: explore">
+                        <h2 class="site-footer-title">Explore</h2>
+                        <ul class="site-footer-links">
+                            <li><a href="Shop/shop.html">Shop</a></li>
+                            <li><a href="custom_builder_guide.html">Custom Builder</a></li>
+                            <li><a href="reviews_faqs.html">Reviews &amp; FAQs</a></li>
+                        </ul>
+                    </nav>
+                    <nav aria-label="Footer: company">
+                        <h2 class="site-footer-title">Company</h2>
+                        <ul class="site-footer-links">
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p class="site-footer-legal">&copy; 2026 TechGates. Phnom Penh, Cambodia.</p>
+            </div>
         </footer>
     </body>
-
 </html>

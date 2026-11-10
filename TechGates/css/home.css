@@ -1,1 +1,200 @@
-/* Sin */
+/* Sin - Home page (index.html). Every class here starts with "home-". */
+
+/* ---------- Hero ---------- */
+.home-hero {
+    padding: 4rem 0 3.5rem;
+    text-align: center;
+}
+
+.home-hero-title {
+    font-size: clamp(2.5rem, 8vw, 5.25rem);
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+}
+
+.home-hero-title span {
+    display: block;
+}
+
+.home-hero-text {
+    max-width: 34rem;
+    margin: 1.5rem auto 0;
+    color: var(--color-muted);
+    font-size: clamp(1.0625rem, 2vw, 1.3125rem);
+    line-height: 1.5;
+}
+
+.home-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+/* ---------- Categories ---------- */
+.home-categories {
+    padding-bottom: 5rem;
+}
+
+.home-category-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.home-category-tile {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 15rem;
+    padding: 2rem;
+    border-radius: var(--radius-tile);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.home-category-tile:hover {
+    background: var(--color-surface-hover);
+}
+
+.home-category-tile h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.home-category-tile p {
+    max-width: 24rem;
+    margin-top: 0.5rem;
+    color: var(--color-muted);
+}
+
+.home-category-action {
+    margin-top: auto;
+    padding-top: 2rem;
+    color: var(--color-brand);
+    font-weight: 500;
+}
+
+.home-category-tile:hover .home-category-action {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+/* ---------- Hardware guide ---------- */
+.home-guide {
+    padding: 4rem 0;
+    background: var(--color-brand);
+    color: var(--color-white);
+}
+
+.home-guide-inner {
+    display: grid;
+    gap: 3rem;
+}
+
+.home-guide h2,
+.home-guide h3 {
+    color: var(--color-white);
+}
+
+.home-guide-intro p {
+    max-width: 30rem;
+    margin: 1rem 0 2rem;
+    color: rgb(255 255 255 / 0.85);
+    font-size: 1.125rem;
+    line-height: 1.55;
+}
+
+.home-guide :focus-visible {
+    outline-color: var(--color-accent);
+}
+
+.home-guide-steps {
+    counter-reset: guide-step;
+}
+
+.home-guide-steps li {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    column-gap: 1rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgb(255 255 255 / 0.3);
+    counter-increment: guide-step;
+}
+
+.home-guide-steps li:last-child {
+    border-bottom: 1px solid rgb(255 255 255 / 0.3);
+}
+
+.home-guide-steps li::before {
+    content: counter(guide-step);
+    grid-column: 1;
+    grid-row: span 2;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-guide-steps h3,
+.home-guide-steps p {
+    grid-column: 2;
+}
+
+.home-guide-steps p {
+    margin-top: 0.25rem;
+    color: rgb(255 255 255 / 0.85);
+}
+
+/* ---------- Help ---------- */
+.home-help {
+    padding: 4rem 0 5rem;
+}
+
+.home-help-list {
+    display: grid;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.home-help-list li {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-line);
+}
+
+.home-help-list p {
+    max-width: 26rem;
+    margin: 0.5rem 0 1rem;
+    color: var(--color-muted);
+}
+
+/* ---------- Wider screens ---------- */
+@media (min-width: 48rem) {
+    .home-hero {
+        padding: 6rem 0 4.5rem;
+    }
+
+    .home-category-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-guide {
+        padding: 5rem 0;
+    }
+
+    .home-help-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+}
+
+@media (min-width: 56rem) {
+    .home-guide-inner {
+        grid-template-columns: 5fr 6fr;
+        gap: 5rem;
+        align-items: start;
+    }
+}
