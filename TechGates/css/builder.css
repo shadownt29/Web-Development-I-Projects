@@ -12,7 +12,6 @@
 
 }
 
-
 /*BUDGET SECTION*/
 .budget-setup {
     padding: 2rem;
@@ -98,11 +97,10 @@
         font-size: clamp(1.5rem, 3vw, 2rem);
         margin-bottom: 1.25rem;
     }
-    @media (min-width: 64rem) {
-        order: 1;
-        position: sticky;
-        top: 1.25rem;
+    p {
+        color: var(--color-muted);
     }
+
 }
 
 .total-row {
