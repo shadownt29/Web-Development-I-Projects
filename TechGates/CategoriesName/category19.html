@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha</title>
+    <link rel="stylesheet" href="category.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="brand-logo">
+        <img src="../assets/brands_categories/brands/image1.png" alt="Brand 1">
+    </div>
+    <h3>Keyboards</h3>
+    <div class="brand-products">
+        <div class="product-card-link" onclick="openDetail('Prime 27,650mAh 250W Power Bank', '179.99$', '../assets/brands_categories/Category19/powerbank1.png', 'High-capacity smart power bank delivering a combined 250W output, digital display screen, and app connectivity for high-draw devices.', ['250W Total Output Power: Easily fast-charges laptops, tablets, and smartphones simultaneously.', '27,650mAh Capacity: Airline-approved high-capacity battery bank for travel and professional work.', 'Smart Digital Display: Real-time battery status, output distribution, and recharge metrics.', 'Bluetooth App Integration: Monitor charging performance and locate power bank via mobile app.'], 'Black', 'In Stock', 'Anker / Power Banks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/brands_categories/Category19/powerbank1.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">Prime 27,650mAh 250W</p>
+                <div class="price">
+                    <p>Anker</p>
+                    <p>179.99$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('Nexode 20,000mAh 130W Power Bank', '89.99$', '../assets/brands_categories/Category19/powerbank2.png', 'Compact 130W fast-charging power bank featuring multi-device USB-C power delivery and a clear TFT digital status screen.', ['130W Fast Charging Output: Powers MacBook Pros and high-performance Type-C devices rapidly.', '20,000mAh Capacity: Ample backup power that complies with carry-on airline regulations.', 'TFT Smart Color Display: Displays remaining battery percentage, voltage, and current output.', 'Advanced Thermal Guard: Monitors temperature continuously to ensure safe charging operations.'], 'Space Grey', 'In Stock', 'UGREEN / Power Banks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/brands_categories/Category19/powerbank2.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">Nexode 20,000mAh 130W</p>
+                <div class="price">
+                    <p>UGREEN</p>
+                    <p>89.99$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('Blade 100W Slim Power Bank', '99.99$', '../assets/brands_categories/Category19/powerbank3.png', 'Ultra-slim laptop power bank designed with a sleek profile to slide easily into laptop bags alongside mobile devices.', ['Ultra-Thin Profile Design: Lightweight, notebook-style casing slips easily into backpacks.', '100W USB-C Power Delivery: Fast-charges USB-C laptops, tablets, and phones.', 'Smart Digital Status Screen: Real-time readout of charging speed and battery level.', 'Multiple Safety Protections: Built-in safeguards against overcharging, overheating, and short circuits.'], 'Silver', 'In Stock', 'Baseus / Power Banks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/brands_categories/Category19/powerbank3.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">Blade 100W</p>
+                <div class="price">
+                    <p>Baseus</p>
+                    <p>99.99$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('20,000mAh 45W Fast Charging Power Bank', '69.99$', '../assets/brands_categories/Category19/powerbank4.png', 'Reliable high-capacity 45W portable charger featuring Super Fast Charging support for Samsung Galaxy devices and USB-C electronics.', ['45W Super Fast Charging: Rapid power delivery for compatible smartphones and tablets.', '20,000mAh Capacity: Provides multiple full charges for phones and accessories on the go.', 'Dual USB-C Output Ports: Charge two devices simultaneously without sacrificing speed.', 'Eco-Friendly Material Build: Constructed using recycled post-consumer plastics.'], 'Dark Grey', 'In Stock', 'Samsung / Power Banks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/brands_categories/Category19/powerbank4.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">20,000mAh 45W</p>
+                <div class="price">
+                    <p>Samsung</p>
+                    <p>69.99$</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="product-detail-dialog">
+        <button class="close-detail-btn" onclick="closeDetail()">&times;</button>
+        <div class="detail-container">
+            <div class="detail-left">
+                <img id="detail-image" alt="Product Image">
+            </div>
+            <div class="detail-right">
+                <h2 id="detail-title"></h2>
+                <p id="detail-desc"></p>
+                <ul id="detail-specs"></ul>
+                <div class="detail-price" id="detail-price"></div>
+                <div class="detail-meta">Color : <span id="detail-color" style="color: #111; font-weight: normal;"></span></div>
+                <div class="detail-meta">Availability : <span class="in-stock" id="detail-stock"></span></div>
+                <div class="detail-category" id="detail-category"></div>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        const dialog = document.getElementById('product-detail-dialog')
+        const detailImg = document.getElementById('detail-image')
+        const detailTitle = document.getElementById('detail-title')
+        const detailDesc = document.getElementById('detail-desc')
+        const detailSpecs = document.getElementById('detail-specs')
+        const detailPrice = document.getElementById('detail-price')
+        const detailColor = document.getElementById('detail-color')
+        const detailStock = document.getElementById('detail-stock')
+        const detailCategory = document.getElementById('detail-category')
+
+        function openDetail(title, price, imgSrc, description, specsArray, color, stock, category) {
+            detailTitle.textContent = title;
+            detailPrice.textContent = price;
+            detailImg.src = imgSrc;
+            detailDesc.textContent = description;
+            detailColor.textContent = color;
+            detailCategory.textContent = category;
+            detailStock.textContent = stock;
+
+            detailSpecs.innerHTML = '';
+            specsArray.forEach(spec => {
+                const li = document.createElement('li');
+                li.textContent = spec;
+                detailSpecs.appendChild(li);
+            });
+
+            dialog.showModal();
+        }
+        function closeDetail() {
+            dialog.close();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('product-detail-dialog').addEventListener('click', function(event) {
+                if(event.target === this) {
+                    closeDetail()
+                }
+            })
+        })
+    </script>
+</body>
+</html>

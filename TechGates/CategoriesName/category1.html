@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha</title>
+    <link rel="stylesheet" href="category.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="brand-logo">
+        <img src="../assets/brands_categories/brands/image1.png" alt="Brand 1">
+    </div>
+    <h3>Accessories</h3>
+    <div class="brand-products">
+        <div class="product-card-link" onclick="openDetail('40Gbps M.2 NVMe SSD Enclosure', '88.99$', '../assets/brands_categories/Brand15/product1.png', 'Blazing-fast USB4 / Thunderbolt 3/4 compatible M.2 NVMe SSD enclosure engineered for professional data transfers and high-speed external storage.', ['40Gbps Ultra-Fast Bandwidth: Supports lightning-fast read and write speeds up to 3000MB/s.', 'Built-In Cooling Fan: Active thermal dissipation prevents thermal throttling under heavy loads.', 'Tool-Free Aluminum Case: Rugged metal casing with simple, tool-free drive installation.', 'Broad Compatibility: Supports NVMe PCIe M.2 SSDs in sizes 2280.'], 'Space Grey', 'In Stock', 'Acasis / Storage & Docks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/brands_categories/Brand15/product1.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">40Gbps M.2 NVMe SSD Enclosure</p>
+                <div class="price">
+                    <p>Acasis</p>
+                    <p>88.99$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('11-in-1 Thunderbolt 4 Docking Station', '159.00$', '../assets/brands_categories/Brand15/product2.png', 'Comprehensive high-performance docking station offering multiple display outputs, high-speed USB ports, power delivery, and single-cable workstation connectivity.', ['11 Versatile Ports: Includes Thunderbolt 4 upstream/downstream, USB-A, SD/TF card slots, and Ethernet.', 'Single-Cable Setup: Charges your laptop while simultaneously driving dual 4K displays at 60Hz.', 'High-Speed Data Transfers: Move large project files in seconds with 40Gbps throughput.', 'Sturdy Aluminum Housing: Efficiently manages thermal performance during intense use.'], 'Silver', 'In Stock', 'Acasis / Storage & Docks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/brands_categories/Brand15/product2.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">11-in-1 Thunderbolt 4 Docking Station</p>
+                <div class="price">
+                    <p>Acasis</p>
+                    <p>159.00$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('USB4 to 10 Gigabit Ethernet Adapter', '109$', '../assets/brands_categories/Brand15/product3.png', 'Professional-grade 10GbE network adapter that brings lightning-fast wired ethernet speeds to laptops and computers via USB4 or Thunderbolt ports.', ['10Gbps High-Speed Ethernet: Ten times faster than standard gigabit connections for heavy data environments.', 'Plug-and-Play Setup: Simple driver installation across macOS and Windows operating systems.', 'Compact Portable Build: Lightweight metal chassis designed for on-the-go professionals.', 'Backward Compatible: Automatically adjusts to 5G, 2.5G, 1G, and 100M link speeds.'], 'Black / Silver', 'In Stock', 'Acasis / Storage & Docks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/brands_categories/Brand15/product3.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">USB4 to 10 Gigabit Ethernet Adapter</p>
+                <div class="price">
+                    <p>Acasis</p>
+                    <p>109$</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-card-link" onclick="openDetail('4K HDMI USB 3.0 Video Capture Card', '29.99$', '../assets/brands_categories/Brand15/product4.png', 'Compact plug-and-play video capture card designed for live streaming, gaming broadcast, and video recording at crystal-clear 1080p 60FPS or 4K input.', ['4K HDMI Input & Pass-Through: Record high-definition video feeds without lag.', 'Low Latency Transmission: Real-time audio and video synchronization for live streamers.', 'Universal Software Compatibility: Works seamlessly with OBS Studio, Zoom, Twitch, and YouTube.', 'Compact Portable Form Factor: Lightweight design requiring no external power adapter.'], 'Black', 'In Stock', 'Acasis / Storage & Docks')">
+            <div class="product-image">
+                <div class="image-wrapper">
+                    <img src="../assets/brands_categories/Brand15/product4.png" alt="Product 1">
+                </div>
+                <div class="border-bottom"></div>
+                <p class="brandName">4K HDMI USB 3.0 Video Capture Card</p>
+                <div class="price">
+                    <p>Acasis</p>
+                    <p>29.99$</p>
+                </div>
+            </div>
+        </div>
+</div>
+
+    <dialog id="product-detail-dialog">
+        <button class="close-detail-btn" onclick="closeDetail()">&times;</button>
+        <div class="detail-container">
+            <div class="detail-left">
+                <img id="detail-image" alt="Product Image">
+            </div>
+            <div class="detail-right">
+                <h2 id="detail-title"></h2>
+                <p id="detail-desc"></p>
+                <ul id="detail-specs"></ul>
+                <div class="detail-price" id="detail-price"></div>
+                <div class="detail-meta">Color : <span id="detail-color" style="color: #111; font-weight: normal;"></span></div>
+                <div class="detail-meta">Availability : <span class="in-stock" id="detail-stock"></span></div>
+                <div class="detail-category" id="detail-category"></div>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        const dialog = document.getElementById('product-detail-dialog')
+        const detailImg = document.getElementById('detail-image')
+        const detailTitle = document.getElementById('detail-title')
+        const detailDesc = document.getElementById('detail-desc')
+        const detailSpecs = document.getElementById('detail-specs')
+        const detailPrice = document.getElementById('detail-price')
+        const detailColor = document.getElementById('detail-color')
+        const detailStock = document.getElementById('detail-stock')
+        const detailCategory = document.getElementById('detail-category')
+
+        function openDetail(title, price, imgSrc, description, specsArray, color, stock, category) {
+            detailTitle.textContent = title;
+            detailPrice.textContent = price;
+            detailImg.src = imgSrc;
+            detailDesc.textContent = description;
+            detailColor.textContent = color;
+            detailCategory.textContent = category;
+            detailStock.textContent = stock;
+
+            detailSpecs.innerHTML = '';
+            specsArray.forEach(spec => {
+                const li = document.createElement('li');
+                li.textContent = spec;
+                detailSpecs.appendChild(li);
+            });
+
+            dialog.showModal();
+        }
+        function closeDetail() {
+            dialog.close();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('product-detail-dialog').addEventListener('click', function(event) {
+                if(event.target === this) {
+                    closeDetail()
+                }
+            })
+        })
+    </script>
+</body>
+</html>

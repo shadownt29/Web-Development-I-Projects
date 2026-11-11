@@ -115,6 +115,9 @@ a {
 .btn-image { background: white; border: 1px solid #ccc; color: #555; }
 .btn-image:hover { background: #f0f0f0; }
 
+/* =========================================
+   7. RIGHT SIDE (COMPONENTS DROPDOWNS)
+   ========================================= */
 .components h2 { font-size: 22px; margin-bottom: 20px; }
 .component-list { display: flex; flex-direction: column; }
 .component-item { margin-bottom: 10px; }
