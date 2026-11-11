@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script src="js/script.js" defer></script>
     </head>
 
     <body>
@@ -30,7 +31,103 @@
         </header>
 
         <main id="main">
-            <!-- Page content goes here. Keep the header and footer as they are. -->
+            <section class="rf-hero">
+                <h1 class="rf-title">
+                    <span>Real feedback.</span>
+                    <span>Clear answers.</span>
+                </h1>
+                <p class="rf-intro">Read verified buyer reviews and get quick answers to common questions about parts, warranty, and delivery across Cambodia.</p>
+            </section>
+
+            <section class="rf-reviews-section">
+                <div class="rf-section-head">
+                    <h2>Customer reviews</h2>
+                    <p>What builders and gamers say about TechGates.</p>
+                </div>
+
+                <form id="rfForm" class="rf-form-tile">
+                    <h3>Leave a review</h3>
+                    <div class="rf-form-row">
+                        <div class="rf-input-group">
+                            <label for="rfName">Your name *</label>
+                            <input type="text" id="rfName" required placeholder="e.g., Alex S.">
+                        </div>
+                        <div class="rf-input-group">
+                            <label for="rfRating">Rating *</label>
+                            <select id="rfRating" required>
+                                <option value="5">★★★★★ (5/5)</option>
+                                <option value="4">★★★★☆ (4/5)</option>
+                                <option value="3">★★★☆☆ (3/5)</option>
+                                <option value="2">★★☆☆☆ (2/5)</option>
+                                <option value="1">★☆☆☆☆ (1/5)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="rf-input-group">
+                        <label for="rfComment">Your feedback *</label>
+                        <textarea id="rfComment" rows="4" required placeholder="Tell us about the parts, packing, or customer service..."></textarea>
+                    </div>
+                    <button type="submit" class="rf-btn">Submit review</button>
+                </form>
+
+                <div class="rf-grid" id="rfReviewsGrid">
+                    <article class="rf-tile">
+                        <div class="rf-tile-header">
+                            <h4>Borith K.</h4>
+                            <span class="rf-stars">★★★★★</span>
+                        </div>
+                        <p class="rf-meta">Verified Buyer • Ryzen 5 RTX 4060 PC</p>
+                        <p class="rf-comment">Ordered a ready-built desktop for university design projects and gaming. Cable management is clean, temperatures stay low, and delivery across Phnom Penh was within 24 hours.</p>
+                    </article>
+
+                    <article class="rf-tile">
+                        <div class="rf-tile-header">
+                            <h4>Sophea M.</h4>
+                            <span class="rf-stars">★★★★★</span>
+                        </div>
+                        <p class="rf-meta">Verified Buyer • PC Parts &amp; RAM</p>
+                        <p class="rf-comment">The hardware guide made choosing compatible parts very straightforward. All components came factory sealed with authentic serial numbers.</p>
+                    </article>
+
+                    <article class="rf-tile">
+                        <div class="rf-tile-header">
+                            <h4>Rathana V.</h4>
+                            <span class="rf-stars">★★★★☆</span>
+                        </div>
+                        <p class="rf-meta">Verified Buyer • 27" Gaming Monitor</p>
+                        <p class="rf-comment">Solid 165Hz IPS monitor with zero backlight bleed. Telegram support answered my questions about panel specs within ten minutes.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="rf-faq-section">
+                <div class="rf-section-head">
+                    <h2>Frequently asked questions</h2>
+                    <p>Common questions answered before you make a purchase.</p>
+                </div>
+
+                <div class="rf-faq-list">
+                    <details class="rf-faq-item" open>
+                        <summary>Are all hardware components authentic and backed by warranty?</summary>
+                        <p>Yes. All laptops, ready-built PCs, and standalone PC parts are 100% genuine and sourced through official regional distributors. Standard manufacturer warranties range from 1 to 3 years.</p>
+                    </details>
+
+                    <details class="rf-faq-item">
+                        <summary>How does the custom builder guide help ensure compatibility?</summary>
+                        <p>The builder guide outlines CPU socket requirements, memory generations (DDR4 vs DDR5), and power supply wattage guidelines so you do not buy mismatched components.</p>
+                    </details>
+
+                    <details class="rf-faq-item">
+                        <summary>What are the shipping times and coverage areas?</summary>
+                        <p>Deliveries within Phnom Penh typically take 24 to 48 hours. We also ship across all Cambodian provinces via reliable express couriers with tracking provided upon dispatch.</p>
+                    </details>
+
+                    <details class="rf-faq-item">
+                        <summary>What payment methods do you accept?</summary>
+                        <p>We accept Bakong / KHQR transfers across all major Cambodian banks, plus cash on delivery for orders delivered within central Phnom Penh.</p>
+                    </details>
+                </div>
+            </section>
         </main>
 
         <footer class="site-footer">
