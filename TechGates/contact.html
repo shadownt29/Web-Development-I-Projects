@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Contact TechGates in Phnom Penh, Cambodia." />
+        <meta name="description" content="Contact TechGates in Phnom Penh, Cambodia, about products, custom builds, or an order." />
         <title>Contact | TechGates</title>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script src="js/script.js" defer></script>
     </head>
 
     <body>
@@ -30,7 +31,82 @@
         </header>
 
         <main id="main">
-            <!-- Page content goes here. Keep the header and footer as they are. -->
+            <section class="contact-hero">
+                <h1 class="contact-title">
+                    <span>Talk to us.</span>
+                </h1>
+                <p class="contact-intro">Have a question about a product, custom PC build, or an existing order? Send us a message or visit our store in Phnom Penh.</p>
+            </section>
+
+            <div class="contact-layout">
+                <aside class="contact-card">
+                    <h2>Store information</h2>
+                    <p class="contact-desc">Visit our hardware desk or reach out to our team directly.</p>
+
+                    <ul class="contact-info-list">
+                        <li>
+                            <strong>Address</strong>
+                            <span>Russian Federation Blvd, Sangkat Teuk Thla, Khan Sen Sok, Phnom Penh, Cambodia</span>
+                        </li>
+                        <li>
+                            <strong>Phone / Telegram</strong>
+                            <span>+855 (0) 23 999 888 / +855 12 345 678</span>
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            <span>support@techgates.com.kh</span>
+                        </li>
+                        <li>
+                            <strong>Store hours</strong>
+                            <span>Monday – Saturday: 8:30 AM – 6:30 PM<br>Sunday: 9:00 AM – 4:00 PM</span>
+                        </li>
+                    </ul>
+                </aside>
+
+                <section class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-card">
+                        <fieldset>
+                            <legend>Your details</legend>
+                            <div class="contact-form-row">
+                                <div class="contact-input-group">
+                                    <label for="contactFullName">Full name *</label>
+                                    <input type="text" id="contactFullName" required placeholder="John Doe">
+                                </div>
+                                <div class="contact-input-group">
+                                    <label for="contactEmail">Email address *</label>
+                                    <input type="email" id="contactEmail" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div class="contact-input-group">
+                                <label for="contactPhone">Phone / Telegram (optional)</label>
+                                <input type="tel" id="contactPhone" placeholder="012 345 678">
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Inquiry details</legend>
+                            <div class="contact-input-group">
+                                <label for="contactSubject">Subject *</label>
+                                <select id="contactSubject" required>
+                                    <option value="">Select an option</option>
+                                    <option value="custom-build">Custom build consultation</option>
+                                    <option value="stock-check">Parts availability</option>
+                                    <option value="order-status">Order status &amp; tracking</option>
+                                    <option value="warranty">Warranty &amp; technical support</option>
+                                </select>
+                            </div>
+                            <div class="contact-input-group">
+                                <label for="contactMessage">Message *</label>
+                                <textarea id="contactMessage" rows="5" required placeholder="Describe what components, budget, or help you need..."></textarea>
+                            </div>
+                        </fieldset>
+
+                        <div id="contactStatus" class="contact-status" aria-live="polite"></div>
+
+                        <button type="submit" class="contact-btn">Send message</button>
+                    </form>
+                </section>
+            </div>
         </main>
 
         <footer class="site-footer">

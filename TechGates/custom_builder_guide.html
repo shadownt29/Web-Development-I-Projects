@@ -7,6 +7,7 @@
         <meta name="description" content="Choose PC parts with the TechGates hardware guide and send a build request." />
         <title>Custom Builder | TechGates</title>
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/builder.css" />
         <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
@@ -36,7 +37,7 @@
                 <h2>Set Your Budget</h2>
                 <div class="budget-form">
                     <input type="number" placeholder="Enter your Budget" />
-                    <button type="button" class="btn-apply">Apply</button>
+                    <button type="button" class="btn btn-normal">Apply</button>
                 </div>
             </section>
 
@@ -53,8 +54,8 @@
                         <span>$0.00</span>
                     </div>
                     <div class="button-row">
-                        <button class="btn-reset" type="button">Reset Build</button>
-                        <button class="btn-submit" type="button">Submit Build</button>
+                        <button type="btn button" class="btn btn-reset" >Reset Build</button>
+                        <button type="button" class="btn btn-normal" >Submit Build</button>
                     </div>
                 </section>
 
@@ -391,68 +392,70 @@
 
             <!-- HARDWARE GUIDE TABLE -->
             <section class="guide-section" id="guide">
-                <table class="guide-table">
-                    <caption>PC Building Guide</caption>
-                    <thead>
-                        <tr>
-                            <th>Step</th>
-                            <th>Component </th>
-                            <th>What to do</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>CPU</td>
-                            <td>Place the CPU into the motherboard socket. Align the triangle marker.</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>RAM</td>
-                            <td>Insert RAM into the recommended slots until it clicks.</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>SSD</td>
-                            <td>Install the SSD into the M.2 slot and secure it with a screw.</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Motherboard</td>
-                            <td>Place the motherboard inside the case and tighten the screws.</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Case Cables</td>
-                            <td>Connect the power button, USB, and audio cables.</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>CPU Cooler</td>
-                            <td>Install the cooler and connect its fan to CPU_FAN.</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Case Fans</td>
-                            <td>Install fans and connect their cables.</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Power Supply (PSU)</td>
-                            <td>Install the power supply and connect the power cables.</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>GPU</td>
-                            <td>Insert the graphics card into the PCIe slot and connect its power cable.</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>First Boot</td>
-                            <td>Connect monitor, keyboard, and mouse. Turn on the PC and enter BIOS.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="guide-table">
+                        <caption>PC Building Guide</caption>
+                        <thead>
+                            <tr>
+                                <th>Step</th>
+                                <th>Component </th>
+                                <th>What to do</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>CPU</td>
+                                <td>Place the CPU into the motherboard socket. Align the triangle marker.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>RAM</td>
+                                <td>Insert RAM into the recommended slots until it clicks.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>SSD</td>
+                                <td>Install the SSD into the M.2 slot and secure it with a screw.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Motherboard</td>
+                                <td>Place the motherboard inside the case and tighten the screws.</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Case Cables</td>
+                                <td>Connect the power button, USB, and audio cables.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>CPU Cooler</td>
+                                <td>Install the cooler and connect its fan to CPU_FAN.</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Case Fans</td>
+                                <td>Install fans and connect their cables.</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Power Supply (PSU)</td>
+                                <td>Install the power supply and connect the power cables.</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>GPU</td>
+                                <td>Insert the graphics card into the PCIe slot and connect its power cable.</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>First Boot</td>
+                                <td>Connect monitor, keyboard, and mouse. Turn on the PC and enter BIOS.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
 
                 <div class="guide-video">
