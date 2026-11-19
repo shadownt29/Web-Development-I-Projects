@@ -104,6 +104,7 @@
   font-size: 0.95rem;
   outline: none;
   transition: border-color 0.2s;
+  resize: vertical;
 }
 
 .rf-input-group input:focus,
@@ -175,6 +176,10 @@
   color: var(--color-ink);
   font-size: 0.925rem;
   line-height: 1.5;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
 .rf-faq-list {
