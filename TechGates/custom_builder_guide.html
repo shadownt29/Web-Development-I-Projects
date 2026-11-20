@@ -11,6 +11,7 @@
         <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <script src="js/builder.js" defer></script>
+        <script src="js/nav.js" defer></script>
     </head>
 
     <body>
@@ -21,7 +22,10 @@
                 <a class="site-logo" href="index.html">
                     <img src="assets/images/logo.png" alt="TechGates" width="198" height="52" />
                 </a>
-                <ul class="site-menu">
+                <button class="site-menu-button" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu">
+                    <span class="site-menu-icon"></span>
+                </button>
+                <ul class="site-menu" id="site-menu">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="Shop/shop.html">Shop</a></li>
                         <li><a href="custom_builder_guide.html" aria-current="page">Custom Builder</a></li>

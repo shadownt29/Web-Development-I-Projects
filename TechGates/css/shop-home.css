@@ -78,7 +78,8 @@
     padding-top: 1.5rem;
 
     & img {
-        width: 5.5rem;
+        flex: 0 1 5.5rem;
+        min-width: 0;
         height: 4.5rem;
         padding: 0.5rem;
         border-radius: 0.75rem;
