@@ -1,4 +1,4 @@
-// Sin - menu button (3 dashes) in the site header. Linked on every page that has the header.
+// Sin - menu button (3 dashes) in the site header.
 
 const menuButton = document.querySelector(".site-menu-button");
 
